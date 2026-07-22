@@ -1,0 +1,28 @@
+infra-services:
+  aks_cluster_name: aks-dev-swedencentral
+  allow_long_names: true
+  applications_destination_repo: https://dev.azure.com/ITGix/Azure%20Landing%20Zones/_git/adp-apps-client
+  applications_template_repo: https://github.com/itgix/adp-k8s-templ-argoappsdemo.git
+  applications_template_repo_branch: v1.2.3
+  azure_devops_org: ITGix
+  azure_devops_project: Azure Landing Zones
+  azure_subscription_id: f7f8b016-64ca-4d42-afad-de91b2eae685
+  backstage_enabled: false
+  cluster_name: aks-dev-swedencentral
+  dns_main_domain: contoso.internal
+  eks_cluster_name: aks-dev-swedencentral
+  enable_falco: false
+  enable_fluent_bit: true
+  enable_kyverno: true
+  enable_kyverno_policies: false
+  enable_loki: false
+  enable_prometheus_stack: false
+  enable_tempo: false
+  enable_trivy_operator: false
+  environment: dev
+  gitops_destination_repo: https://dev.azure.com/ITGix/Azure%20Landing%20Zones/_git/adp-argocd-client
+  gitops_template_repo: https://github.com/itgix/adp-k8s-templ-argoinfrasvcs.git
+  gitops_template_repo_branch: v1.2.17
+  project_name: contosoadp
+  region: swedencentral
+  resource_group: rg-managed-dev-swedencentral

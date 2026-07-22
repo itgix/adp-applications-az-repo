@@ -1,0 +1,22 @@
+# Add chart overrides for this environment/region here.
+sample-component:
+  externalsecretEnv:
+    enabled: true
+    env:
+    - name: DATASOURCE_USERNAME
+      key: "sample-app-secret"
+      property: username
+    - name: SAMPLE_VAR
+      key: "sample-app-secret"
+      property: password
+  ingress:
+    annotations:
+      kubernetes.io/ingress.class: traefik
+    dynamic:
+      tls: false
+      baseDomain: contoso.internal
+      cfgs:
+      - name: sample-component
+        paths:
+          - /
+        port: 80
